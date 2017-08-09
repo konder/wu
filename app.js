@@ -3,6 +3,7 @@ const app = express()
 const request = require('request');
 
 app.get('/', function (req, res) {
+	console.log(req.query);
 	request({
 		url: "http://www.tuling123.com/openapi/api",
 		method: "POST",
