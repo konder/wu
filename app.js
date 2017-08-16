@@ -10,6 +10,7 @@ app.get('/', function (req, res) {
 		json: true,
 		body: {"key":"7774b01eefe745ff8427cc7939e6affc", "info":req.query.word.replace(/小美/, '')}
 	}, function (error, response, body) {
+		console.log(body);
 		var word = "听不懂";
                 if (body.code == 100000){
                         word = body.text;
