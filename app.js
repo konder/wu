@@ -16,10 +16,6 @@ app.get('/', function (req, res) {
                         word = body.text;
                 }else if (body.code == 200000){
                         word = body.url;
-                }else if (body.code == 302000){
-                        body.list.forEach(x=>{
-                                word += x.article + "(" + x.detailurl+ "),"
-                        })
                 }
 		res.send({"success": true, "errorCode": "200", "errorMsg": "", "fields": {"回话": word}});
 	});
